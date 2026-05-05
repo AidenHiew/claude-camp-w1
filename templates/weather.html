@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather for {{ weather.city }}</title>
+    <style>
+      body { font-family: Arial, sans-serif; background: #eef2f7; color: #222; margin: 0; padding: 0; }
+      .page { max-width: 520px; margin: 72px auto; padding: 32px; background: #fff; border-radius: 14px; box-shadow: 0 18px 30px rgba(16, 24, 40, 0.12); }
+      .header { display: flex; align-items: center; gap: 18px; }
+      .header img { width: 96px; height: 96px; }
+      .temperature { font-size: 56px; margin: 0; }
+      .description { font-size: 20px; margin: 8px 0 0; text-transform: capitalize; }
+      .details { margin-top: 22px; display: grid; gap: 10px; font-size: 15px; }
+      .details span { display: block; }
+      a.button { display: inline-block; margin-top: 24px; padding: 12px 18px; background: #2563eb; color: white; border-radius: 10px; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div>
+          <h1>{{ weather.city }}, {{ weather.country }}</h1>
+          <p class="description">{{ weather.description }}</p>
+        </div>
+        <img src="{{ weather.icon_url }}" alt="Weather icon">
+      </div>
+      <p class="temperature">{{ weather.temperature }}°C</p>
+      <div class="details">
+        <span>Humidity: {{ weather.humidity }}%</span>
+        <span>Wind speed: {{ weather.wind_speed }} m/s</span>
+      </div>
+      <a class="button" href="/">Search another city</a>
+    </div>
+  </body>
+</html>
