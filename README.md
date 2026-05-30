@@ -143,3 +143,22 @@ Future improvements may include:
 * Adding comments and docstrings
 * Adding screenshots for the weather app
 * Improving the web app layout
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.env
+.venv/
+venv/
+
+# Local editor settings
+.vscode/
+
+# Flask
+instance/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
